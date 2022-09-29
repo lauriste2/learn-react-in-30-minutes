@@ -5,14 +5,11 @@ import './App.css';
 import React, { useState, useRef, useEffect } from 'react';
 const localStorageKey = 'todapp.todos'
 
-
-
-
-
 function App() {
   let [todos, setTodos] = useState([{ Id: 1, Name: 'Todo1', Complete: false }, { Id: 2, Name: 'Todo2', Complete: true }])
   const todoNameRef = useRef()
 
+  // Not working
   useEffect(() => {
     const storedTodos = JSON.parse(localStorage.getItem(localStorageKey))
     if (storedTodos) {
@@ -20,6 +17,7 @@ function App() {
     }
   }, [])
 
+  // Not working
   useEffect(() => {
     localStorage.setItem(localStorageKey, JSON.stringify(todos));
   }, [todos]);
