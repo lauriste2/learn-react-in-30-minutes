@@ -49,9 +49,9 @@ function App() {
     <>
       <TodoList todos={todos} toggleTodo={toggleTodo} />
       <input ref={todoNameRef} type="text" />
-      <button onClick={handleAddTodo}>add todo</button>
-      <button onClick={handleClearTodos}>Clear Complete</button>
-      <div>{todos.filter(todo => !todo.Complete).length}  left to do</div>
+      <button onClick={handleAddTodo}>Lägg till att göra</button>
+      <button onClick={handleClearTodos}>Rensa slutförda</button>
+      <div>{todos.filter(todo => !todo.Complete).length}  saker kvar att göra</div>
     </>
   );
   //return null
